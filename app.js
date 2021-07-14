@@ -11,7 +11,8 @@ button.onclick = GUESS
        console.log("Enter key is pressed");
        if (String(input.value.length) > 2 && Number(input.value) != 100){
         message.innerText = 'Can\'t Guess More Than 100!';
-     
+        input.placeholder = `Last Guess: ${input.value}`
+     input.value = '';
 
     }else{GUESS()
  }
