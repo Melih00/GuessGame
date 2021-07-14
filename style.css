@@ -1,0 +1,88 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #171717;
+  font-family: "Permanent Marker", cursive; font-weight: 100;
+}
+h1 {
+  color: rgb(208, 138, 255);
+  text-align: center;
+  font-size: 53px;
+}
+h2 {
+  color: rgb(128, 198, 255);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 43px;
+  font-weight: 100;
+}
+span {
+  font-family: arial;
+  font-weight: 600;
+}
+p {
+  font-size: 26px;
+  font-weight: 100;
+  color: aliceblue;
+  display: block;
+  text-align: center;
+}
+.divinput{
+    position: block;
+    display: flex;
+    justify-content: center;
+}
+.divinput button{
+    background-color:rgb(128, 198, 255) ;
+    width: auto;
+    padding: 16px;
+    margin: 0px 10px;
+    cursor: pointer;
+    border-radius: 40%;
+    font-size: 30px;
+    transition: all 400ms;
+
+ border: 4px solid salmon;
+}
+.divinput button:hover{
+    border: 4px solid #171717;}
+input {
+  background-color: #dffc90;
+  font-family: "Permanent Marker", cursive;
+  border: none;
+  width: 420px;
+  height: 70px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 24px;
+
+  border: 7px solid rgba(5, 170, 170, 0.753);
+  outline: 0px solid #171717;
+  outline-offset: 0px;
+  transition: all 400ms;
+}
+input:hover {
+  border: 7px solid #171717;
+  outline: 15px solid #171717;
+  outline-offset: -9px;
+}
+input:focus {
+  border: 7px solid #171717;
+  outline: 20px solid #171717;
+  outline-offset: -7px;
+}
+@media only screen and (max-width: 600px) {
+    input{
+        width: 200px;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 12px;
+    }
+    h1{
+        margin: 10px auto;
+    }
+    h2{
+        font-size: 34px;
+    }
+}

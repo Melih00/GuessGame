@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>Guess Game</h1>
+    <p class="explanation">Guess the number between <span>1</span> and<span> 100</span>. You have <span> 10</span>
+        chances.</p>
+    <div class="divinput"><input  type="text" id="input"
+     onkeypress='return enterKeyPressed(event)'
+         placeholder="Number Here">
+        <button id="check">Check!</button></div>
+
+    <p>Numbers of attempts remaining : <br><span id="remaining">10</span></p>
+    <h2 id="message"></h2>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
