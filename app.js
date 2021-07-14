@@ -27,6 +27,11 @@ button.onclick = GUESS
       
  
      }else{
+         if (remaining.innerText == 1){
+            remaining.innerText = Number(remaining.innerText) -1;
+
+            message.innerHTML = ` <h2 id='message'>Out Of Attempts</h2>   <input type="button" style='cursor:pointer;' value="TRY AGAIN" onclick="document.location.reload(true);">`;
+        }else{
      if (Number(input.value) === theNumber){
  message.innerHTML = ` <h2 id='message'>Congrats! You Found The Number, Wonna Try Again?</h2>   <input type="button" style='cursor:pointer;' value="TRY AGAIN" onclick="document.location.reload(true);">`;
  button.disabled = 'disabled';
@@ -34,18 +39,22 @@ button.onclick = GUESS
  input.style.cursor = 'not-allowed';
  button.style.cursor = 'not-allowed';
      }else if (Number(input.value) > theNumber ){
+        remaining.innerText = Number(remaining.innerText) -1;
          if (Number(input.value) - 30 >theNumber ){
          message.innerText = 'Too High!\nGuess Lower';
          }else{
              message.innerText = 'You Close!\nGuess Lower';
          }
      }else if (Number(input.value) < theNumber ){
+        remaining.innerText = Number(remaining.innerText) -1;
+
          if (Number(input.value) + 30 <theNumber ){
          message.innerText = 'Too Low!\nGuess Higher';
          }else{
              message.innerText = 'You Close!\nGuess Higher';
          }
-     }else{
+     }else{        remaining.innerText = Number(remaining.innerText) -1;
+
          message.innerText = 'Something Went Wrong';
  
      }
@@ -55,4 +64,4 @@ button.onclick = GUESS
      input.value = '';
         return true;
      } 
- 
+ }
