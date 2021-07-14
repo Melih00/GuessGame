@@ -21,7 +21,6 @@ button.onclick = GUESS
  
  function GUESS(){
      
-
         if (String(input.value.length) > 2 && Number(input.value) != 100){
          message.innerText = 'Can\'t Guess More Than 100!';
       
